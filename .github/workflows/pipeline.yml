@@ -35,3 +35,4 @@ jobs:
           heroku_email: tommi.juslin@gmail.com
           healthcheck: https://tj-pokedex.herokuapp.com/health
           checkstring: 'ok'
+          rollbackonhealthcheckfailed: true
