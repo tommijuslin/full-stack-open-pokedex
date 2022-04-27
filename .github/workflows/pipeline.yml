@@ -33,3 +33,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: tj-pokedex
           heroku_email: tommi.juslin@gmail.com
+          healthcheck: https://tj-pokedex.herokuapp.com/health
+          checkstring: 'ok'
