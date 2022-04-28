@@ -22,9 +22,6 @@ jobs:
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
-      - name: to string
-        env:
-          COMMIT_MESSAGES: ${{ github.event.commits.*.message) }}
       - name: skip this
         if: ${{ !contains(join(toJson(github.events.commits.*.message)), '#skip') }}
         run: echo "Did I get skipped?"
